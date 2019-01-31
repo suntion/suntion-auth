@@ -2,8 +2,8 @@
   <div id="nav" :style="navHeight">
     <el-scrollbar style="height:100%;overflow-x:hidden">
       <el-menu default-active="1" class="el-menu-vertical-demo" :router="true">
-        <el-menu-item index="/index">消息中心</el-menu-item>
-        <el-submenu index="" show-timeout=50 hide-timeout=50>
+        <el-menu-item index="/content">消息中心</el-menu-item>
+        <el-submenu index="" :show-timeout=50 :hide-timeout=50>
           <template slot="title">权限管理</template>
           <el-menu-item index="/sunshen">
             <i class="el-icon-error"/>sunshen
