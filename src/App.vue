@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import nav from "@/components/layout/nav/nav";
-import header from "@/components/layout/header/header";
+import nav from "@/components/layout/nav";
+import header from "@/components/layout/header";
 export default {
   data() {
     return {
@@ -33,7 +33,7 @@ export default {
   },
   created() {
     this.user = {
-      name: "@cname", // 内容：npm安装后 mockjs/src/mock/random/xxx.js
+      name: "@cname",
       area: "@province(true)",
       identity: "超级管理员"
     };

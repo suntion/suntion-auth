@@ -1,7 +1,6 @@
 <template>
   <div>
     <header>
-      <img src="@/static/logo.svg" alt="logo" class="header-logo">
       <ul class="header-operations">
         <li>
           <span class="header-lang is-active">{{user.name}}</span>
@@ -36,13 +35,8 @@
     box-sizing: border-box;
     position: fixed;
   }
-  .header-logo {
-    display: inline-block;
-    vertical-align: middle;
-  }
   .header-operations {
     display: inline-block;
-    float: right;
     padding-right: 30px;
     height: 100%;
   }
