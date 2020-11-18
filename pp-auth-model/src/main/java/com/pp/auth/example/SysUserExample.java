@@ -9,6 +9,10 @@ public class SysUserExample {
 
     protected boolean distinct;
 
+    protected int pageSize = 15;
+
+    protected int pageNum = 0;
+
     protected List<Criteria> oredCriteria;
 
     public SysUserExample() {
@@ -29,6 +33,22 @@ public class SysUserExample {
 
     public boolean isDistinct() {
         return distinct;
+    }
+
+    public int getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(int pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public int getPageNum() {
+        return pageNum;
+    }
+
+    public void setPageNum(int pageNum) {
+        this.pageNum = pageNum;
     }
 
     public List<Criteria> getOredCriteria() {
