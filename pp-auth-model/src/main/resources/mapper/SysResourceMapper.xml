@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pp.auth.dao.SysResourceMapper">
+  <resultMap id="BaseResultMap" type="com.pp.auth.model.SysResource">
+    <id column="resource_id" jdbcType="BIGINT" property="resourceId" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="application" jdbcType="VARCHAR" property="application" />
+    <result column="resource_name" jdbcType="VARCHAR" property="resourceName" />
+    <result column="type" jdbcType="CHAR" property="type" />
+    <result column="visible" jdbcType="CHAR" property="visible" />
+    <result column="permission_str" jdbcType="VARCHAR" property="permissionStr" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="order_num" jdbcType="INTEGER" property="orderNum" />
+    <result column="extdata" jdbcType="VARCHAR" property="extdata" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="createuser" jdbcType="VARCHAR" property="createuser" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="updateuser" jdbcType="VARCHAR" property="updateuser" />
+    <result column="status" jdbcType="CHAR" property="status" />
+  </resultMap>
+
+</mapper>

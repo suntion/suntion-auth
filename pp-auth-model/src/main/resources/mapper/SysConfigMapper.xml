@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pp.auth.dao.SysConfigMapper">
+  <resultMap id="BaseResultMap" type="com.pp.auth.model.SysConfig">
+    <id column="config_id" jdbcType="INTEGER" property="configId" />
+    <result column="config_name" jdbcType="VARCHAR" property="configName" />
+    <result column="config_key" jdbcType="VARCHAR" property="configKey" />
+    <result column="config_value" jdbcType="VARCHAR" property="configValue" />
+    <result column="config_type" jdbcType="CHAR" property="configType" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="createuser" jdbcType="VARCHAR" property="createuser" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="updateuser" jdbcType="VARCHAR" property="updateuser" />
+    <result column="status" jdbcType="CHAR" property="status" />
+  </resultMap>
+
+</mapper>

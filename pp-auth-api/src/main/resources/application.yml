@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: pp-auth-api
+  profiles:
+    active: ${profiles.active}
+server:
+  undertow:
+    accesslog:
+      enabled: true
+      dir: /pp/logs/pp-auth-api
+      pattern: common
+mybatis:
+  mapper-locations: classpath*:**/mapper/**/*Mapper.xml
