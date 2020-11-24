@@ -1,33 +1,15 @@
 package com.pp.auth.example;
 
+import com.pp.auth.base.BaseExample;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class SysUserExample {
+public class SysUserExample extends BaseExample {
     protected String orderByClause;
 
     protected boolean distinct;
-
-    protected int pageSize = 15;
-
-    protected int pageNum = 0;
-
-    public int getPageSize() {
-        return pageSize;
-    }
-
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    public int getPageNum() {
-        return pageNum;
-    }
-
-    public void setPageNum(int pageNum) {
-        this.pageNum = pageNum;
-    }
 
     protected List<Criteria> oredCriteria;
 

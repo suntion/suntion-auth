@@ -1,10 +1,12 @@
 package com.pp.auth.example;
 
+import com.pp.auth.base.BaseExample;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class SysRoleExample {
+public class SysRoleExample extends BaseExample {
     protected String orderByClause;
 
     protected boolean distinct;

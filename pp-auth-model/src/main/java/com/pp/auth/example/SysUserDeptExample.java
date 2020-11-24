@@ -1,9 +1,11 @@
 package com.pp.auth.example;
 
+import com.pp.auth.base.BaseExample;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class SysUserDeptExample {
+public class SysUserDeptExample extends BaseExample {
     protected String orderByClause;
 
     protected boolean distinct;
