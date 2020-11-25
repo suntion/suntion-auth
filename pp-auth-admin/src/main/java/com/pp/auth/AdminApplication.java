@@ -10,9 +10,9 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 @ComponentScan(basePackages={"com.pp"})
 @MapperScan(basePackages = {"com.pp.**.dao"})
-public class ApiApplication {
+public class AdminApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(ApiApplication.class, args);
+		SpringApplication.run(AdminApplication.class, args);
 	}
 
 	@Bean

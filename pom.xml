@@ -10,9 +10,9 @@
 
     <modules>
         <module>pp-auth-common</module>
-        <module>pp-auth-api</module>
         <module>pp-auth-service</module>
         <module>pp-auth-model</module>
+        <module>pp-auth-admin</module>
     </modules>
 
     <properties>

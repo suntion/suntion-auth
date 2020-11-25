@@ -1,4 +1,11 @@
 spring:
+  application:
+    name: pp-auth-admin
+  thymeleaf:
+    cache: false
+    mode: HTML5
+    check-template: true
+    check-template-location: true
   datasource:
     druid:
       db-type: com.alibaba.druid.pool.DruidDataSource
@@ -10,3 +17,18 @@ spring:
       validation-query: select 'x'
       test-while-idle: true
       test-on-borrow: false
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  undertow:
+    accesslog:
+      enabled: true
+      dir: /pp/logs/pp-auth-api
+      pattern: common
+mybatis:
+  mapper-locations: classpath*:**/mapper/**/*Mapper.xml
+jwt:
+  secret: secret
+  expiration: 7200000
+  token: Authorization
