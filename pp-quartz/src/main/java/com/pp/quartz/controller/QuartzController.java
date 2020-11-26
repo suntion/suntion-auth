@@ -8,6 +8,7 @@ import com.pp.quartz.utils.VoResult;
 import com.pp.quartz.vo.JobVo;
 import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,11 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("pp/quartz")
+@ConditionalOnProperty(
+        prefix = "spring.quartz",
+        name = "job-store-type",
+        havingValue = "jdbc"
+)
 public class QuartzController {
 
     private final QuartzService quartzService;
@@ -46,8 +52,6 @@ public class QuartzController {
     private void assertVo(JobVo vo) {
         Assert.notNull(vo.getJobClass(), "paramter jobClass must not be null");
         Assert.notNull(vo.getCronExpression(), "paramter cronExpression must not be null");
-        Assert.notNull(vo.getJobGroup(), "paramter jobGroup must not be null");
-        Assert.notNull(vo.getJobDescription(), "paramter jobDescription must not be null");
     }
 
 

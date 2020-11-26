@@ -8,6 +8,7 @@ import com.pp.quartz.utils.QuartzUtils;
 import org.quartz.JobDataMap;
 import org.quartz.SchedulerException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,11 @@ import java.util.List;
  * @since 2018年3月14日下午2:34:46
  */
 @Service
+@ConditionalOnProperty(
+		prefix = "spring.quartz",
+		name = "job-store-type",
+		havingValue = "jdbc"
+)
 public class QuartzService {
 	@Autowired
 	private SchedulerFactoryBean schedulerFactoryBean;
