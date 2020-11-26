@@ -1,5 +1,6 @@
 package com.pp.auth.exception;
 
+import com.pp.common.exception.GlobalException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.method.HandlerMethod;
@@ -23,9 +24,9 @@ import java.util.Map;
 public class GlobalExceptionResolver extends AbstractHandlerExceptionResolver {
     private static final Logger log = LoggerFactory.getLogger(GlobalExceptionResolver.class);
 
-    private static final String VORESULTCLASSNAME = "com.pp.auth.utils.VoResult";
-    private static final String TABLERESULTCLASSNAME = "com.pp.auth.utils.TableResult";
-    private static final String PAGLERESULTCLASSNAME = "com.pp.auth.utils.PageResult";
+    private static final String VORESULTCLASSNAME = "com.pp.auth.utils.page.VoResult";
+    private static final String TABLERESULTCLASSNAME = "com.pp.auth.utils.page.TableResult";
+    private static final String PAGLERESULTCLASSNAME = "com.pp.auth.utils.page.PageResult";
 
     @Override
     protected ModelAndView doResolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {

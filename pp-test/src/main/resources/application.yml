@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: pp-test
+  datasource:
+    druid:
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      max-active: 20
+      url: jdbc:mysql://sontion.cn:3306/pp_auth?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=PRC&useSSL=false
+      username: root
+      password: rootabc,123
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  undertow:
+    accesslog:
+      enabled: true
+      dir: /pp/logs/pp-test
+      pattern: common
+pp:
+  quartz:
+    open: true
+    driver-class: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://sontion.cn:3306/pp_auth?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=PRC&useSSL=false
+    user-name: root
+    pass-word: rootabc,123

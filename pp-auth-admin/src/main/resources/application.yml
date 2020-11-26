@@ -2,14 +2,12 @@ spring:
   application:
     name: pp-auth-admin
   thymeleaf:
+    mode: HTML
+    encoding: utf-8
     cache: false
-    mode: HTML5
-    check-template: true
-    check-template-location: true
   datasource:
     druid:
       db-type: com.alibaba.druid.pool.DruidDataSource
-      filters: stat
       max-active: 20
       url: jdbc:mysql://sontion.cn:3306/pp_auth?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=PRC&useSSL=false
       username: root
@@ -17,6 +15,20 @@ spring:
       validation-query: select 'x'
       test-while-idle: true
       test-on-borrow: false
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: static/i18n/messages
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  # 文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size:  10MB
+      # 设置总上传的文件大小
+      max-request-size:  20MB
 server:
   port: 8080
   servlet:
@@ -28,7 +40,9 @@ server:
       pattern: common
 mybatis:
   mapper-locations: classpath*:**/mapper/**/*Mapper.xml
-jwt:
-  secret: secret
-  expiration: 7200000
-  token: Authorization
+
+# 项目相关配置
+pp:
+  common:
+    # 文件路径 示例（ Windows配置D:/pp/uploadPath，Linux配置 /home/pp/uploadPath）
+    profile: D:/pp/uploadPath

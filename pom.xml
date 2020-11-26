@@ -3,73 +3,31 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.pp.auth</groupId>
-    <artifactId>pp-auth</artifactId>
+    <groupId>com.pp</groupId>
+    <artifactId>pp-partent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>pp-auth-common</module>
+        <module>pp-common</module>
         <module>pp-auth-service</module>
         <module>pp-auth-model</module>
         <module>pp-auth-admin</module>
+        <module>pp-quartz</module>
+        <module>pp-redis</module>
+        <module>pp-log</module>
+        <module>pp-test</module>
     </modules>
 
     <properties>
-        <project.encoding>UTF-8</project.encoding>
-        <jdk.version>1.8</jdk.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-
         <!-- spring -->
         <springboot.version>2.0.8.RELEASE</springboot.version>
         <spring.cloud.version>Finchley.SR3</spring.cloud.version>
-
-        <pp.auth.model.version>1.0.0-SNAPSHOT</pp.auth.model.version>
-        <pp.auth.service.version>1.0.0-SNAPSHOT</pp.auth.service.version>
-        <pp.auth.common.version>1.0.0-SNAPSHOT</pp.auth.common.version>
-
-
-        <!-- swagger2-->
-        <swagger.version>2.7.0</swagger.version>
-
-        <!-- 数据库-->
-        <pagehelper.version>1.2.11</pagehelper.version>
-        <tk.mybatis.version>2.1.1</tk.mybatis.version>
-        <druid.version>1.1.10</druid.version>
-
-        <!-- 工具类-->
-        <fastjson.version>1.2.38</fastjson.version>
-        <jackson.version>1.9.13</jackson.version>
     </properties>
 
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.codehaus.jackson</groupId>
-                <artifactId>jackson-mapper-asl</artifactId>
-                <version>${jackson.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.pp.auth</groupId>
-                <artifactId>pp-auth-service</artifactId>
-                <version>${pp.auth.service.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.pp.auth</groupId>
-                <artifactId>pp-auth-model</artifactId>
-                <version>${pp.auth.model.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.pp.auth</groupId>
-                <artifactId>pp-auth-common</artifactId>
-                <version>${pp.auth.common.version}</version>
-            </dependency>
-
             <!-- springcloud依赖-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -86,63 +44,35 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-
-            <!-- 数据库-->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
-
-            <!-- mybatis-->
-            <dependency>
-                <groupId>tk.mybatis</groupId>
-                <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>${tk.mybatis.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>${pagehelper.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                    <encoding>${project.encoding}</encoding>
-                    <testIncludes>
-                        <testInclude>none</testInclude>
-                    </testIncludes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <configuration>
-                    <delimiters>
-                        <delimiter>@</delimiter>
-                    </delimiters>
-                    <useDefaultDelimiters>true</useDefaultDelimiters>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <source>${jdk.version}</source>-->
+<!--                    <target>${jdk.version}</target>-->
+<!--                    <encoding>${project.encoding}</encoding>-->
+<!--                    <testIncludes>-->
+<!--                        <testInclude>none</testInclude>-->
+<!--                    </testIncludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-resources-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <delimiters>-->
+<!--                        <delimiter>@</delimiter>-->
+<!--                    </delimiters>-->
+<!--                    <useDefaultDelimiters>true</useDefaultDelimiters>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
     <profiles>
         <profile>
@@ -177,7 +107,6 @@
             </properties>
         </profile>
     </profiles>
-
 
 
 </project>
