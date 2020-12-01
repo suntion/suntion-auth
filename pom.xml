@@ -20,6 +20,9 @@
     </modules>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
         <!-- spring -->
         <springboot.version>2.0.8.RELEASE</springboot.version>
         <spring.cloud.version>Finchley.SR3</spring.cloud.version>
@@ -47,66 +50,39 @@
         </dependencies>
     </dependencyManagement>
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <source>${jdk.version}</source>-->
-<!--                    <target>${jdk.version}</target>-->
-<!--                    <encoding>${project.encoding}</encoding>-->
-<!--                    <testIncludes>-->
-<!--                        <testInclude>none</testInclude>-->
-<!--                    </testIncludes>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-resources-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <delimiters>-->
-<!--                        <delimiter>@</delimiter>-->
-<!--                    </delimiters>-->
-<!--                    <useDefaultDelimiters>true</useDefaultDelimiters>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
-
-    <profiles>
-        <profile>
-            <!-- 本地环境 -->
-            <id>dev</id>
-            <properties>
-                <profiles.active>dev</profiles.active>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-        <profile>
-            <!-- 测试环境 -->
-            <id>test</id>
-            <properties>
-                <profiles.active>test</profiles.active>
-            </properties>
-        </profile>
-        <profile>
-            <!-- 预发布环境 -->
-            <id>pre</id>
-            <properties>
-                <profiles.active>pre</profiles.active>
-            </properties>
-        </profile>
-        <profile>
-            <!-- 生产环境 -->
-            <id>prod</id>
-            <properties>
-                <profiles.active>prod</profiles.active>
-            </properties>
-        </profile>
-    </profiles>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            &lt;!&ndash; 本地环境 &ndash;&gt;-->
+<!--            <id>dev</id>-->
+<!--            <properties>-->
+<!--                <profiles.active>dev</profiles.active>-->
+<!--            </properties>-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
+<!--        </profile>-->
+<!--        <profile>-->
+<!--            &lt;!&ndash; 测试环境 &ndash;&gt;-->
+<!--            <id>test</id>-->
+<!--            <properties>-->
+<!--                <profiles.active>test</profiles.active>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--        <profile>-->
+<!--            &lt;!&ndash; 预发布环境 &ndash;&gt;-->
+<!--            <id>pre</id>-->
+<!--            <properties>-->
+<!--                <profiles.active>pre</profiles.active>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--        <profile>-->
+<!--            &lt;!&ndash; 生产环境 &ndash;&gt;-->
+<!--            <id>prod</id>-->
+<!--            <properties>-->
+<!--                <profiles.active>prod</profiles.active>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--    </profiles>-->
 
 
 </project>

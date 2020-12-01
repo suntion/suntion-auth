@@ -1,11 +1,18 @@
 package com.pp.auth.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+
 /**
  * sys_user_post 用户岗位表
  *
  * @author Scott
  * @date   2020/11/18
  */
+@Setter
+@Getter
+@Accessors(chain = true)
 public class SysUserPost {
     /**
      * 岗位ID
@@ -17,19 +24,4 @@ public class SysUserPost {
      */
     private Long userId;
 
-    public Long getPostId() {
-        return postId;
-    }
-
-    public void setPostId(Long postId) {
-        this.postId = postId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
 }

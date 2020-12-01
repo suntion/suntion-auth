@@ -2,6 +2,9 @@ package com.pp.auth.model;
 
 import com.pp.common.base.BaseEntity;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
 /**
  * sys_post 岗位
@@ -9,7 +12,9 @@ import lombok.Data;
  * @author Scott
  * @date   2020/11/18
  */
-@Data
+@Setter
+@Getter
+@Accessors(chain = true)
 public class SysPost extends BaseEntity {
     /**
      * 主键
