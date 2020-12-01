@@ -5,8 +5,7 @@ package com.pp.common.enums;
  *
  * @author ruoyi
  */
-public enum OnlineStatus
-{
+public enum OnlineStatus {
     /** 用户状态 */
     on_line("在线"), off_line("离线");
 

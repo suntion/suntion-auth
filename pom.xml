@@ -10,13 +10,10 @@
 
     <modules>
         <module>pp-common</module>
-        <module>pp-auth-service</module>
-        <module>pp-auth-model</module>
-        <module>pp-auth-admin</module>
+        <module>pp-admin</module>
         <module>pp-quartz</module>
-        <module>pp-redis</module>
         <module>pp-log</module>
-        <module>pp-test</module>
+        <module>pp-auth</module>
     </modules>
 
     <properties>
@@ -27,7 +24,6 @@
         <springboot.version>2.0.8.RELEASE</springboot.version>
         <spring.cloud.version>Finchley.SR3</spring.cloud.version>
     </properties>
-
 
     <dependencyManagement>
         <dependencies>
@@ -49,40 +45,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-<!--    <profiles>-->
-<!--        <profile>-->
-<!--            &lt;!&ndash; 本地环境 &ndash;&gt;-->
-<!--            <id>dev</id>-->
-<!--            <properties>-->
-<!--                <profiles.active>dev</profiles.active>-->
-<!--            </properties>-->
-<!--            <activation>-->
-<!--                <activeByDefault>true</activeByDefault>-->
-<!--            </activation>-->
-<!--        </profile>-->
-<!--        <profile>-->
-<!--            &lt;!&ndash; 测试环境 &ndash;&gt;-->
-<!--            <id>test</id>-->
-<!--            <properties>-->
-<!--                <profiles.active>test</profiles.active>-->
-<!--            </properties>-->
-<!--        </profile>-->
-<!--        <profile>-->
-<!--            &lt;!&ndash; 预发布环境 &ndash;&gt;-->
-<!--            <id>pre</id>-->
-<!--            <properties>-->
-<!--                <profiles.active>pre</profiles.active>-->
-<!--            </properties>-->
-<!--        </profile>-->
-<!--        <profile>-->
-<!--            &lt;!&ndash; 生产环境 &ndash;&gt;-->
-<!--            <id>prod</id>-->
-<!--            <properties>-->
-<!--                <profiles.active>prod</profiles.active>-->
-<!--            </properties>-->
-<!--        </profile>-->
-<!--    </profiles>-->
-
-
 </project>

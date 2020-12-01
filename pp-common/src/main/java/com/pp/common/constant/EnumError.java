@@ -8,12 +8,11 @@ public enum EnumError {
 
     private String message;
 
-    private EnumError(String code) {
-        // TODO Auto-generated constructor stub
+    EnumError(String code) {
         this.code = code;
     }
 
-    private EnumError(String code, String message) {
+    EnumError(String code, String message) {
         this.code = code;
         this.message = message;
     }
