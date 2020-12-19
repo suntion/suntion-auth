@@ -62,18 +62,6 @@
           <el-menu-item index="/lulu">
             <i class="el-icon-error"/>lulu
           </el-menu-item>
-          <el-menu-item index="/lulu">
-            <i class="el-icon-error"/>lulu
-          </el-menu-item>
-          <el-menu-item index="/lulu">
-            <i class="el-icon-error"/>lulu
-          </el-menu-item>
-          <el-menu-item index="/lulu">
-            <i class="el-icon-error"/>lulu
-          </el-menu-item>
-          <el-menu-item index="/lulu">
-            <i class="el-icon-error"/>lulu
-          </el-menu-item>
         </el-submenu>
       </el-menu>
     </el-scrollbar>
@@ -83,14 +71,13 @@
 <script>
 export default {
   name: "Nav",
-  data(){
-    return {
-    }
+  data() {
+    return {}
   },
-  computed:{
-     navHeight () {
+  computed: {
+    navHeight() {
       return {
-        height: (window.innerHeight - 80) + 'px'
+        height: (window.innerHeight) + 'px'
       }
     },
   }
@@ -98,8 +85,8 @@ export default {
 </script>
 
 <style>
-  .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 300px;
-    min-height: 800px;
-  }
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 300px;
+  min-height: 800px;
+}
 </style>

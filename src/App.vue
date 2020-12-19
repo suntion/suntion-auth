@@ -1,15 +1,14 @@
 <template>
-<div>
-   <el-container direction="vertical" style="height:100%">
-        <v-header :user="user"/>
-        <el-container style="padding-top:80px">
-            <el-aside>
-              <v-nav/>
-            </el-aside>
-            <el-main>
-              <router-view />
-            </el-main>
-        </el-container>
+  <div>
+    <el-container direction="vertical" style="height:100%">
+      <el-container>
+        <el-aside>
+          <v-nav/>
+        </el-aside>
+        <el-main>
+          <router-view/>
+        </el-main>
+      </el-container>
     </el-container>
   </div>
 </template>
@@ -21,34 +20,38 @@ export default {
   data() {
     return {
       user: {},
-      num:300
+      num: 300
     };
   },
   components: {
     "v-nav": nav,
     "v-header": header
   },
-  beforeCreate: function() {
+  beforeCreate: function () {
     this.$router.push("index");
-  },
-  created() {
-    this.user = {
-      name: "@cname",
-      area: "@province(true)",
-      identity: "超级管理员"
-    };
   }
 };
 </script>
 
 <style>
 body {
-  background-color: #f2f2f2;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
-
-.el-scrollbar__wrap {
+.el-aside {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow-x: hidden;
+}
+.el-main {
+  position: absolute;
+  left: 300px;
+  right: 0;
+  top: 30px;
+  bottom: 0;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 </style>
